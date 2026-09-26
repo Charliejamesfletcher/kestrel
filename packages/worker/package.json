@@ -1,0 +1,15 @@
+{
+  "name": "@kestrel/worker",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch --conditions=development src/main.ts",
+    "build": "tsc -b",
+    "start": "node dist/main.js"
+  },
+  "dependencies": {
+    "@kestrel/db": "0.1.0",
+    "@kestrel/shared": "0.1.0"
+  }
+}

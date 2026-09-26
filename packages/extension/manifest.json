@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "Kestrel — chess opponent scouting",
+  "version": "0.1.0",
+  "description": "Scout your next opponent's openings and habits before the round. Hidden during live games.",
+  "permissions": ["storage"],
+  "host_permissions": [
+    "https://www.chess.com/*",
+    "https://lichess.org/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://www.chess.com/*", "https://lichess.org/*"],
+      "js": ["src/content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}

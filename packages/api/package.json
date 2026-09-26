@@ -1,0 +1,16 @@
+{
+  "name": "@kestrel/api",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch --conditions=development src/server.ts",
+    "build": "tsc -b",
+    "start": "node dist/server.js"
+  },
+  "dependencies": {
+    "@kestrel/db": "0.1.0",
+    "@kestrel/shared": "0.1.0",
+    "fastify": "^5.1.0"
+  }
+}

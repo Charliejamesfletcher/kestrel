@@ -1,0 +1,9 @@
+{
+  "name": "@kestrel/extension",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "echo \"Extension build is set up in Phase 5\""
+  }
+}
