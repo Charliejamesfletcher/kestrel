@@ -8,6 +8,7 @@
   <img src="https://img.shields.io/badge/Node-22-5fa04e?logo=nodedotjs&logoColor=white" alt="Node 22">
   <img src="https://img.shields.io/badge/Postgres-16-4169e1?logo=postgresql&logoColor=white" alt="Postgres 16">
   <img src="https://img.shields.io/badge/tests-237%20passing-81b64c" alt="237 tests">
+  <a href="LICENSE"><img src="https://img.shields.io/badge/license-PolyForm%20Noncommercial-555" alt="License: PolyForm Noncommercial 1.0.0"></a>
 </p>
 
 <p align="center">
@@ -143,6 +144,10 @@ docs/          architecture, API, report engine, screenshots
 ## Status
 
 The fetching, report engine, web app and extension all work end to end against live Chess.com and Lichess data. Accounts and payments, the legal pages and the production deploy are next.
+
+## License
+
+Kestrel is source-available under the [PolyForm Noncommercial License 1.0.0](LICENSE). You're welcome to read the code, run it and change it for personal, educational or other noncommercial use. Commercial use, including running it as a paid service, isn't permitted without a separate licence. Get in touch if that's what you're after.
 
 ---
 
