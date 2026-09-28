@@ -7,12 +7,7 @@ export const sleep = (ms: number, signal?: AbortSignal) =>
     });
   });
 
-/**
- * Runs `tick` strictly one at a time until stopped. This is the heart of
- * "one request at a time": the next tick never starts before the last one
- * finished. `tick` returns true when it did work (run again straight away)
- * or false when idle (wait `idleMs` before checking again).
- */
+/** Strictly serial: the next tick never starts before the last one finishes. */
 export async function runLoop(
   tick: () => Promise<boolean>,
   { idleMs, signal, onError }: { idleMs: number; signal: AbortSignal; onError: (err: unknown) => void }

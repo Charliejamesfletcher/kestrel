@@ -7,6 +7,8 @@ export default defineConfig({
   },
   test: {
     include: ['packages/*/src/**/*.test.ts'],
-    environment: 'node'
+    environment: 'node',
+    // Database tests share one database, so test files run one after another
+    fileParallelism: false
   }
 });

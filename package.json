@@ -15,7 +15,11 @@
     "dev:worker": "npm run dev -w @kestrel/worker",
     "dev:web": "npm run dev -w @kestrel/web",
     "migrate": "npm run migrate -w @kestrel/db",
-    "typecheck": "tsc -b",
+    "scout": "npm run scout -w @kestrel/worker --",
+    "remove": "npm run remove -w @kestrel/worker --",
+    "fixture": "npm run fixture -w @kestrel/worker --",
+    "backfill": "npm run backfill -w @kestrel/worker",
+    "typecheck": "tsc -b && tsc -p packages/web",
     "test": "vitest run",
     "build": "tsc -b && npm run build -w @kestrel/web"
   },

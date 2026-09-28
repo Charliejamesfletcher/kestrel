@@ -4,6 +4,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "echo \"Extension build is set up in Phase 5\""
+    "icons": "node scripts/make-icons.mjs",
+    "package": "cd .. && rm -f extension/kestrel-extension.zip && cd extension && zip -qr kestrel-extension.zip manifest.json icons src -x 'src/*.test.ts' && echo 'Wrote packages/extension/kestrel-extension.zip'",
+    "build": "echo 'Nothing to build: load packages/extension in chrome://extensions (Load unpacked)'"
   }
 }

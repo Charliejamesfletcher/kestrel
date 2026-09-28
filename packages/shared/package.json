@@ -16,6 +16,7 @@
     "build": "tsc -b"
   },
   "dependencies": {
+    "chess.js": "^1.4.0",
     "zod": "^3.23.0"
   }
 }

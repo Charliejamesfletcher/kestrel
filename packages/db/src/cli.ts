@@ -1,5 +1,7 @@
+import { loadDotEnv } from '@kestrel/shared';
 import { createPool, migrate } from './index.js';
 
+loadDotEnv();
 const url = process.env.DATABASE_URL;
 if (!url) {
   console.error('DATABASE_URL is not set. Copy .env.example to .env first.');

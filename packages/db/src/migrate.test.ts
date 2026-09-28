@@ -1,7 +1,6 @@
 import { afterAll, describe, expect, it } from 'vitest';
 import { createPool, isDatabaseUp, migrate } from './index.js';
 
-// Runs only when a real database is available (locally or in CI).
 const url = process.env.DATABASE_URL;
 const maybe = url ? describe : describe.skip;
 

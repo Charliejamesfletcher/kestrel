@@ -17,6 +17,7 @@
     "migrate": "tsx --conditions=development src/cli.ts"
   },
   "dependencies": {
+    "@kestrel/shared": "0.1.0",
     "pg": "^8.13.0"
   },
   "devDependencies": {

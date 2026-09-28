@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Kestrel</title>
+    <link rel="stylesheet" href="ui.css" />
+    <style>
+      body { width: 340px; }
+      main { display: flex; flex-direction: column; gap: 14px; padding: 18px; }
+      form { display: flex; flex-direction: column; gap: 10px; }
+      footer { display: flex; justify-content: space-between; gap: 12px; }
+      footer a { display: inline-flex; align-items: center; min-height: 32px; font-size: 13px; font-weight: 800; }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="brand">
+        <span class="brand__mark" aria-hidden="true">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15l8-10 8 10" /><path d="M8 20l4-5 4 5" /></svg>
+        </span>
+        Kestrel
+      </div>
+
+      <div id="lock" class="lock" role="status" hidden>
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#e8a33d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2" /><path d="M8 11V8a4 4 0 0 1 8 0v3" /></svg>
+        <div>
+          <strong>Locked while a game is open</strong>
+          <span>Kestrel shows nothing during a game. Close the game tab, or finish the game, to scout again.</span>
+        </div>
+      </div>
+
+      <form id="form" novalidate>
+        <div class="pill" role="group" aria-label="Site they play on">
+          <button type="button" data-platform="chesscom" aria-pressed="true">Chess.com</button>
+          <button type="button" data-platform="lichess" aria-pressed="false">Lichess</button>
+        </div>
+        <label class="label" for="username">Who are you playing next?</label>
+        <input id="username" class="input" type="text" autocomplete="off" autocapitalize="none" spellcheck="false" placeholder="Their username" aria-describedby="error" />
+        <p id="error" class="error" role="alert" hidden></p>
+        <button id="go" class="go" type="submit">Scout for free</button>
+      </form>
+
+      <p class="note">Preparation only: public games, never during a live game.</p>
+      <footer>
+        <a id="site" href="#" target="_blank" rel="noopener">Open Kestrel</a>
+        <a href="options.html" target="_blank">Settings</a>
+      </footer>
+    </main>
+    <script src="lib.js"></script>
+    <script src="popup.js"></script>
+  </body>
+</html>

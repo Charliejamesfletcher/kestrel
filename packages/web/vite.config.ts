@@ -5,7 +5,8 @@ export default defineConfig({
   plugins: [react()],
   server: {
     port: 5173,
-    // In development, /api/* goes to the local API so there are no CORS issues
-    proxy: { '/api': { target: 'http://localhost:3000', rewrite: (p) => p.replace(/^\/api/, '') } }
+    // In development, /api/* goes to the local API so there are no CORS issues.
+    // KESTREL_API points it elsewhere (e.g. a mock server) without editing this file.
+    proxy: { '/api': process.env.KESTREL_API ?? 'http://localhost:3000' }
   }
 });

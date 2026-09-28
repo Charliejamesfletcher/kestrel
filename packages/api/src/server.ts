@@ -1,10 +1,18 @@
 import { createPool } from '@kestrel/db';
-import { loadConfig } from '@kestrel/shared';
-import { buildApp } from './app.js';
+import { loadConfig, loadDotEnv } from '@kestrel/shared';
+import { buildApp, defaultWebDist } from './app.js';
 
+loadDotEnv();
 const config = loadConfig();
 const db = createPool(config.DATABASE_URL);
-const app = buildApp({ db, version: config.APP_VERSION, logger: true });
+const app = buildApp({
+  db,
+  version: config.APP_VERSION,
+  logger: true,
+  now: () => new Date(),
+  webDist: defaultWebDist(),
+  trustProxy: process.env.TRUST_PROXY === 'true'
+});
 
 const shutdown = async (signal: string) => {
   app.log.info(`${signal} received, shutting down`);

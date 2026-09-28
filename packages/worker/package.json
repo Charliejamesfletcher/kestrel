@@ -6,7 +6,11 @@
   "scripts": {
     "dev": "tsx watch --conditions=development src/main.ts",
     "build": "tsc -b",
-    "start": "node dist/main.js"
+    "start": "node dist/main.js",
+    "scout": "tsx --conditions=development src/scout.ts",
+    "fixture": "tsx --conditions=development src/fixture.ts",
+    "backfill": "tsx --conditions=development src/backfill.ts",
+    "remove": "tsx --conditions=development src/remove.ts"
   },
   "dependencies": {
     "@kestrel/db": "0.1.0",
