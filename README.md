@@ -128,6 +128,12 @@ open http://localhost:3000
 
 That starts Postgres, runs the migrations, and brings up the API (which also serves the web app) and the worker. See [docs/development.md](docs/development.md) for running the pieces separately.
 
+To check everything still works:
+
+```bash
+npm run typecheck && npm test   # database tests are skipped unless DATABASE_URL is set
+```
+
 ## Project layout
 
 ```text
